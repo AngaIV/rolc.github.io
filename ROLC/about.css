@@ -1,0 +1,376 @@
+*{
+  font-family: "Overpass", sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/*main colours used by the system*/
+:root {
+  --main-yellow: #f1ac44;
+  --main-yellow-hover: #f1bc6c;
+  --lighter-yellow: #fff700;
+  --main-black: #000000;
+  --main-white: #fff;
+  --text-grey: #9c9da3;
+  --backgroung-grey: #ddd;
+  --border-colour: #dddddda2;
+}
+
+body{
+    margin: 0;
+}
+
+/*.about{
+    padding: 0px 100px;
+    padding-top: 100px;
+    min-height: 100vh;
+    margin-bottom: 50px;
+}*/
+
+/*web header*/
+.web_header{
+  background-color: #111111;
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  z-index: 900; 
+  color: white;
+}
+
+.hero{
+  margin-top: 80px;
+  background-color: #f5f5f5;
+  padding: 40px 80px;
+  margin-bottom: 80px;
+}
+
+nav a{
+ color: var(--main-black);
+}
+
+.hero h2{
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -3px;
+    color: var(--main-black);
+    margin: 0;
+    text-align: left;
+}
+
+.hero h2::after {
+  content: "_";             
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 1.5s steps(1) infinite;
+}
+
+/*blink effect*/
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.subtext{
+  font-size: 16px;
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamWrapper {
+  display: flex;
+  gap: 20px;              
+  justify-content: center;
+  flex-wrap: wrap;      
+  margin-top: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 70px;
+}
+
+.teamMember {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 40px;
+  border-radius: 20px;
+  position: relative;
+  height: 370px;
+}
+
+.profile{
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.teamMember img {
+  border-radius: 8px; 
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile p{
+  margin: 0;
+}
+
+.profile .title{
+  color: var(--text-grey);
+}
+
+.teamMember .description {
+  margin: 0;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.linkedIn-btn{
+  padding: 8px 15px;
+  background-color: var(--main-white);
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  position: relative;
+  transition: all 0.3s ease;
+  bottom: 40px;
+  position: absolute;
+  left: 40px;        
+  right: 40px;   
+  width: auto;
+}
+
+.linkedIn-btn:hover{
+  cursor: pointer;
+  border: 1px solid #0072b1 ;
+  color: #0072b1;
+}
+
+/*styling for social btns*/
+.teamMember a {
+  position: relative;
+  overflow: hidden;          
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #0072b1 ;
+  background-color: #0072b1 ;
+  border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.teamMember i {
+  position: absolute;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+/*Cool hover transition, white icon slides to left on hover and black icon slides into frame*/
+.teamMember .front {
+  color: white;
+  transform: translateX(0);
+  font-size: 15px;
+  transition: transform 0.3s ease;
+}
+
+.teamMember .back {
+  color: white;
+  font-size: 15px;
+  transform: translateX(200%);
+  transition: transform 0.3s ease;
+}
+
+.teamMember .linkedIn-btn:hover .front {
+  transform: translateX(-200%);
+  transition: transform 0.3s ease;
+}
+
+.teamMember .linkedIn-btn:hover .back {
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+/*text flip effect on hover fr*/
+.flip-text {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.flip-text .text-up,
+.flip-text .text-down {
+  position: absolute;
+  width: 100%;
+  color: var(--main-black);
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.flip-text .text-up {
+  transform: translateY(0);
+}
+
+.flip-text .text-down {
+  transform: translateY(100%);
+}
+
+.linkedIn-btn:hover .flip-text .text-up {
+  transform: translateY(-100%);
+  color: #0072b1;
+}
+
+.linkedIn-btn:hover .flip-text .text-down {
+  transform: translateY(0);
+  color: #0072b1;
+}
+
+.VisitUsButton{
+  color: var(--main-white);
+  background-color: var(--main-yellow);
+  padding: 10px 40px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 0;
+  transition: all 0.3s ease;
+}
+
+.VisitUsButton:hover{
+  background-color: var(--main-yellow-hover);
+  color: var(--main-black);
+  cursor: pointer;
+}
+
+/* #location-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+} */
+
+
+/* MEDIA QUERIES  */
+
+/* iPhone XS Max and similar mobile devices (<= 414px wide) */
+@media only screen and (max-width: 414px) {
+
+  .hero {
+    padding: 20px;
+    margin-top: 70px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+
+  .subtext {
+    font-size: 14px;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .teamWrapper {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 30px;
+  }
+
+  .teamMember {
+    height: auto;
+    padding: 25px;
+  }
+
+  .linkedIn-btn {
+    left: 20px;
+    right: 20px;
+    font-size: 14px;
+    padding: 8px 10px;
+    bottom: 20px;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .teamMember img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .VisitUsButton {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Desktop screens (>= 1024px wide) */
+@media only screen and (min-width: 1024px) {
+
+  .hero {
+    padding: 60px 120px;
+  }
+
+  .hero h2 {
+    font-size: 60px;
+    text-align: left;
+  }
+
+  .subtext {
+    font-size: 18px;
+  }
+
+  .teamWrapper {
+    padding-left: 150px;
+    padding-right: 150px;
+    gap: 30px;
+  }
+
+  .teamMember {
+    height: 400px;
+    padding: 50px;
+  }
+
+  .linkedIn-btn {
+    font-size: 16px;
+    left: 50px;
+    right: 50px;
+  }
+
+  .VisitUsButton {
+    font-size: 16px;
+    padding: 12px 50px;
+  }
+}

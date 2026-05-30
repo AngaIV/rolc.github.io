@@ -1,0 +1,436 @@
+*{
+    font-family: "Overpass", sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/*main colours used by the system*/
+:root {
+  --main-yellow: #f1ac44;
+  --hover-yellow: #eebd73;
+  --lighter-yellow: #fff700;
+  --main-black: #000000;
+  --main-white: #fff;
+  --text-grey: #838383;
+  --backgroung-grey: #ddd;
+}
+
+/*overlay wrapper */
+.login_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    
+}
+
+.login_container {
+    display: flex;
+    width: 950px;
+    height: 550px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+    animation: slideDown 0.3s ease;
+}
+
+/*Left side*/
+.login_information {
+    flex: 1;
+    background: #001965;
+}
+
+.login_information video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Right sid*/
+.right_side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 40px;
+    background: #fff;
+}
+
+.login, .register{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.right_side .heading {
+    font-size: 35px;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.right_side .subHeading{
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.login form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.login input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.login .submit_btn {
+    padding: 12px;
+    background: var(--main-yellow);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login .submit_btn:hover {
+    background: var(--hover-yellow);
+}
+
+
+
+.forgotPassword {
+    display: flex;
+    justify-content: space-between; /* pushes items to far left & right */
+    align-items: center;
+    font-size: 12px; /* sets both links to 12px */
+    margin-bottom: 10px;
+}
+
+.forgotPassword a {
+    color: var(--main-black);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgotPassword a:hover {
+    color: var(--main-yellow);
+}
+
+/* Tooltip */
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: not-allowed;
+}
+
+.google{
+    width: 100%;
+}
+
+.forgot-pwd .tooltip-text {
+    left: 60%;
+    transform: translateX(-60%);
+}
+
+.tooltip-wrapper .tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 6px 8px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; 
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.forgot-pwd .tooltip-text {
+    left: 60%;
+    transform: translateX(-30%);
+}
+
+
+.tooltip-wrapper:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.google-btn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    cursor: not-allowed; 
+    
+}
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/*Slider for login or register*/
+.functionality_type {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 30px;
+    margin: 0px 0 17px 0;
+    border-bottom: 1px solid #d7dce3;
+    overflow: hidden;
+}
+
+/*hide radio buttons*/
+.typeButton {
+    display: none;
+}
+
+/*label*/
+.typeLable {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #9c9da3;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+/*active label colors*/
+#login:checked ~ #loginLable,
+#register:checked ~ #registerLable {
+    color: var(--main-black);
+}
+
+/*sliding underline*/
+.functionality_type-selection {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 50%;
+    background: var(--main-black);
+    border-radius: 2px;
+    z-index: 1;
+    transform: translateX(0%);
+    transition: transform 0.3s ease;
+}
+
+/*move underline*/
+#register:checked ~ .functionality_type-selection {
+    transform: translateX(100%);
+}
+
+#login:checked ~ .functionality_type-selection {
+    transform: translateX(0%);
+}
+
+.vertical-divider {
+    display: inline-block;
+    width: 1px;
+    height: 13px; 
+    background-color: #999;
+    margin: 0 8px;
+    vertical-align: middle;
+}
+
+
+/*Terms and conditions*/
+.TandC{
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.TandC a{
+    color: var(--main-yellow);
+}
+
+
+
+/*Register section*/
+.register form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 15px;
+    
+}
+
+.register form label {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--main-black);
+    margin: 0;
+}
+
+.password-container {
+    width: 100%;
+    position: relative;
+}
+
+.register form input, .register form select,.register form #password { 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 6px; 
+    font-size: 14px; 
+    margin-top: 0; 
+    margin-bottom: 10px; 
+    width: 100%; position: relative; 
+}
+
+.password-container input {
+    width: 100%;
+    padding: 12px;
+    padding-right: 40px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.register-pwd-container .toggle-eye{
+    position: absolute;
+    top: 40%;
+    right: 12px; 
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+}
+
+.toggle-eye {
+    position: absolute;
+    top: 50%;
+    right: 12px; 
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+}
+
+.name-row, .row {
+  display: flex;
+  gap: 15px; 
+}
+
+.name-field {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+.row-2{
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+.register form button {
+    padding: 12px;
+    background: var(--main-yellow);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.register form button:hover {
+    background: var(--hover-yellow);
+}
+
+.close-btn .fa-circle-xmark{
+    position: absolute;
+    font-size: 25px;
+    color: var(--main-white);
+    top: 40px;
+    right: 40px;
+    transition: transform 0.3s ease;
+}
+
+.close-btn .fa-circle-xmark:hover{
+    transform: scale(1.5);
+}
+
+/*Password requirements*/
+.requirements {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #555;
+    text-align: left;
+    padding: 0;
+    font-weight: 300;
+}
+
+
+
+.requirements li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.requirements li.invalid {
+    color: var(--text-grey); 
+}
+
+.requirements li.valid {
+    color:green; 
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+#registerBtn:disabled {
+  background-color: var(--text-grey);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/*slide-down animation */
+@keyframes slideDown {
+    from {transform: translateY(-200px); opacity: 0;}
+    to {transform: translateY(0px); opacity: 1;}
+}

@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merch Shop - River of Life Church</title>
+    
+    <link rel="stylesheet" href="store.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="donation_overlay.css">
+      <link rel="stylesheet" href="login.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    
+    <link rel="icon" type="image/x-icon" href="images/churchLogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 1000,
+                    once: true
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <div class="back2top-container">
+        <a class="back2top-btn" href=""><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
+    <section class="quick-notice">
+        <div class="notice-container">
+        <div class="notice-group">
+            <a href="index.html"><i style="font-size: 18px;" class="bi bi-box-arrow-left"></i></a>
+        </div>
+            <div class="notice-group">
+                <p class="notice"> GLAD &nbsp; YOU’RE &nbsp; HERE! &nbsp; LET’S &nbsp; EXPLORE &nbsp; TOGETHER</p>
+            </div>
+            <div class="notice-group">
+                <a href="tel:'+ 27 (87) 814-0109'" >+ 27 (87) 814-0109</a>
+            </div>
+        </div>
+    </section>
+
+    <header class="nav_bar">
+        <div class="web_header">
+            <div class="header_content">
+                <nav class="navMenu">
+                    <div class="group">
+                        <a class="header_nav" href="store_home.html">HOME</a>
+                        <a class="header_nav" href="store.html">SHOP</a>
+                        <a class="header_nav" href="contact.html">CONTACT</a>
+                    </div>
+                
+                    <div class="group">
+                        <a id="logo_nav" href="index.html">
+                            <img src="images/churchLogo.png" alt="web_logo" class="web_logo white-logo" width="50px" height="50px" style="display: block;">
+                            <img src="images/churchLogoBlack.png" alt="web_logo" class="web_logo black-logo" width="50px" height="50px" style="display: none;">
+                        </a>
+                    </div>
+                    
+                    <div class="group" style="display: flex; align-items: center;">
+                        <a href="javascript:void(0)" id="testimonyOpenBtn" class="testimony-open-btn">RATE OUR SHOP</a>
+
+                        <a href="#" style="font-size: 20px;" onclick="showLoginOverlay('login')"><i class="bi bi-person-circle"></i></a>
+
+                        <a href="shopping_cart.html" style="font-size: 18px; position: relative;">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                            <span id="cart-counter-badge" style="background: red; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px; position: absolute; top: -8px; right: -8px; display: none;">0</span>
+                        </a>
+                    </div>
+                </nav>
+                
+                <div class="menu-toggle">&#9776;</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <div class="supporting-text">
+                <div class="group g1" data-aos="fade-right">
+                    <p class="since">SINCE 1997</p>
+                    <h2 id="hero-heading">GRACE IN <br>EVERY THREAD</h2>
+                </div>
+                <div class="group"></div>
+                <div class="group g2" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="hero-tagline">Share your faith in style with our exclusive collection, made to inspire.</p>
+                    <button class="shop-btn" onclick="document.getElementById('featured-collection').scrollIntoView({behavior: 'smooth'});">SHOP NOW</button>
+                </div>
+            </div>
+
+            <div class="swiper swiper-container" data-aos="fade-left">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images\stock.jpg" alt="Merchandise Banner Showcase 1"></div>
+                    <div class="swiper-slide"><img src="images\stock1.jpg" alt="Merchandise Banner Showcase 2"></div>
+                    <div class="swiper-slide"><img src="images\stock2.jpg" alt="Merchandise Banner Showcase 3"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
+        <section class="items-display-container">
+            
+            <div class="top-section">
+                <div class="headings" data-aos="fade-right">
+                    <p class="small-heading">RECENT ARRIVALS</p>
+                    <h2 class="big-heading">LATEST COLLECTIONS</h2>
+                </div>
+                </div>
+
+            <div class="items-grid">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="card-wrapper" data-aos="fade-left">
+                                <div class="product-card" data-product-id="1" data-category="T-Shirts">
+                                    <img src="uploads\products\1759608983_praise_team_shirt.png" alt="Praise Team T-Shirt" class="product-img">
+                                    <div class="options"> 
+                                        <div class="option-specs">
+                                            <form action="#" method="POST" onsubmit="event.preventDefault(); if(validateForm()){ alert('Demo Mode: Thank you for your support!'); document.getElementById('productReviewOverlay').style.display = 'none'; document.body.style.overflow = 'auto'; }">
+                                                <select name="size" class="spec-btn size-select" data-sizes='{"S":10,"M":15,"L":0}'>
+                                                    <option value="">SELECT SIZE</option>
+                                                    <option value="S">S</option>
+                                                    <option value="M">M</option>
+                                                    <option value="L" disabled>L (Out of Stock)</option>
+                                                </select>
+                                                <select name="quantity" class="spec-btn quantity-select" disabled>
+                                                    <option value="">SELECT QUANTITY</option>
+                                                </select>
+                                            </form>
+                                        </div> 
+                                        <button type="button" class="add-cart-btn" data-id="1" data-name="Grace T-Shirt" data-price="250.00">
+                                            ADD TO CART
+                                        </button>
+                                    </div> 
+                                </div> 
+                                <div class="product-info">
+                                    <a href="product_expanded.html?product_id=1" class="prod_name">Grace T-Shirt</a>
+                                    <p class="price">R 250.00</p>
+                                </div>
+                            </div> 
+                        </td>
+
+                        <td>
+                            <div class="card-wrapper" data-aos="fade-left">
+                                <div class="product-card" data-product-id="2" data-category="Hoodies">
+                                    <img src="uploads\products\1759608476_blue_hoodie.png" alt="Faith Hoodie" class="product-img">
+                                    <div class="options"> 
+                                        <div class="option-specs">
+                                            <form>
+                                                <select name="size" class="spec-btn size-select" data-sizes='{"M":8,"L":12}'>
+                                                    <option value="">SELECT SIZE</option>
+                                                    <option value="M">M</option>
+                                                    <option value="L">L</option>
+                                                </select>
+                                                <select name="quantity" class="spec-btn quantity-select" disabled>
+                                                    <option value="">SELECT QUANTITY</option>
+                                                </select>
+                                            </form>
+                                        </div> 
+                                        <button type="button" class="add-cart-btn" data-id="2" data-name="Faith Hoodie" data-price="450.00">
+                                            ADD TO CART
+                                        </button>
+                                    </div> 
+                                </div> 
+                                <div class="product-info">
+                                    <a href="product_expanded.html?product_id=2" class="prod_name">Faith Hoodie</a>
+                                    <p class="price">R 450.00</p>
+                                </div>
+                            </div> 
+                        </td>
+
+                        <td>
+                            <div class="card-wrapper" data-aos="fade-left">
+                                <div class="product-card" data-product-id="3" data-category="Accessories">
+                                    <img src="uploads\products\1759597274_bible.png" alt="Holy Bible" class="product-img">
+                                    <div class="options"> 
+                                        <div class="option-specs">
+                                            <form>
+                                                <select name="quantity" class="spec-btn quantity-select">
+                                                    <option value="">SELECT QUANTITY</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </form>
+                                        </div> 
+                                        <button type="button" class="add-cart-btn" data-id="3" data-name="River Bottle" data-price="180.00">
+                                            ADD TO CART
+                                        </button>
+                                    </div> 
+                                </div> 
+                                <div class="product-info">
+                                    <a href="product_expanded.html?product_id=3" class="prod_name">Holy Bible</a>
+                                    <p class="price">R 180.00</p>
+                                </div>
+                            </div> 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="btn-wrapper">
+                <button class="main-btn" onclick="window.location.href='store.html'">VIEW MORE</button>
+            </div>
+        </section>
+
+<section class="review-section">
+            <div class="swiper review-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide review-area">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="review-body">"Excellent service! The latest collections fit perfectly and the quality is exceptional."</p>
+                        <p class="fullname-location">S. Khumalo, Johannesburg</p>
+                    </div>
+
+                    <div class="swiper-slide review-area">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+                        <p class="review-body">"Very happy with my order. Delivery was fast and customer service helped me select the right size."</p>
+                        <p class="fullname-location">M. van der Merwe, Cape Town</p>
+                    </div>
+
+                    <div class="swiper-slide review-area">
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="review-body">"Beautiful designs that carry an impactful message. Will definitely purchase from this store again!"</p>
+                        <p class="fullname-location">A. Naidoo, Durban</p>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
+        <section>
+            <div class="marquee">
+                <div class="marquee">
+                <div class="track">
+                    <div class="content">
+                        FAITH, HOPE, AND JOY ALL IN ONE PLACE. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-cross" style="font-size: 14px;"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        FAITH, HOPE, AND JOY ALL IN ONE PLACE. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-cross" style="font-size: 14px;"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        FAITH, HOPE, AND JOY ALL IN ONE PLACE. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-cross" style="font-size: 14px;"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        FAITH, HOPE, AND JOY ALL IN ONE PLACE. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-cross" style="font-size: 14px;"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        FAITH, HOPE, AND JOY ALL IN ONE PLACE. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-cross" style="font-size: 14px;"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        FAITH, HOPE, AND JOY ALL IN ONE PLACE. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-cross" style="font-size: 14px;"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        FAITH, HOPE, AND JOY ALL IN ONE PLACE. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-cross" style="font-size: 14px;"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        FAITH, HOPE, AND JOY ALL IN ONE PLACE. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-cross" style="font-size: 14px;"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="store-guarantees-section">
+            <div class="sg-wrapper" >
+                <div class="guarantee" data-aos="fade-up">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <p class="heading"><strong>Free Delivery</strong></p>
+                    <p class="subheading">Enjoy free shipping on all orders over R500.</p>
+                </div>
+
+                <div class="guarantee" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <p class="heading"><strong>Secure Payments</strong></p>
+                    <p class="subheading">All transactions are safe and fully encrypted.</p>
+                </div>
+
+                <div class="guarantee" data-aos="fade-up" data-aos-delay="1000">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p class="heading"><strong>Money-Back Guarantee</strong></p>
+                    <p class="subheading">Get a full refund if you’re not satisfied.</p>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="faq-wrapper">
+                <h2>FAQ</h2>
+                <div class="faq-item">
+                    <button class="faq-btn">
+                        <p>What is your return policy?</p> <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept returns within 30 days of purchase. Items must be unused, in their original packaging, and accompanied by a receipt. Refunds or exchanges are processed once the return is inspected.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-btn">
+                        <p>Do you offer free delivery?</p> <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Unfortunately, we do not offer free delivery.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-btn">
+                        <p>How can I track my order?</p> <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Once your order has been shipped, you’ll receive an email or SMS with a tracking number and a link to follow your delivery in real time.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-btn">
+                        <p>What payment methods do you accept?</p> <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We only accept credit cards for secure and convenient checkout.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-btn">
+                        <p>Do you ship internationally?</p> <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No, we currently only deliver within South Africa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-home">
+        <div class="footerContainer">
+            <div class="footerColumn">
+                <a href="index.html" style="text-decoration: none;">
+                    <div class="logo-footer">
+                        <img src="images/churchLogo.png" alt="Church Logo" width="100" height="100">
+                    </div>
+                </a>
+            </div>
+            <div class="footerColumn">
+                <h4 class="footer-heading">QUICK LINKS</h4>
+                <a href="index.html" class="footerLink">Home</a>
+                <a href="about.html" class="footerLink">About</a>
+                <a href="services.html" class="footerLink">Services</a>
+                <a href="store_home.html" class="footerLink">Store</a>
+            </div>
+            <div class="footerColumn">
+                <h4 class="footer-heading">OPERATING HOURS</h4>
+                <p>Thursday – Friday: 18:00 – 19:30</p>
+                <p>Sunday: 08:30 – 13:00</p>
+            </div>
+            <div class="footerColumn">
+                <h4 class="footer-heading">Social Media</h4>            
+                <div class="social-icons">
+                    <a id="fb-link" href="https://m.facebook.com/riveroflife.gtn/about/"><i class="fa-brands fa-facebook front"></i></a>
+                    <a id="ig-link" href="https://www.instagram.com/river.oflifechurch/"><i class="fa-brands fa-instagram front"></i></a>
+                    <a id="wa-link" href="https://chat.whatsapp.com/"><i class="fa-brands fa-whatsapp front"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="login_section">
+        <div class="login_overlay" style="display: none;">
+            <a href="#" class="close-btn" onclick="closeLoginOverlay(); return false;"><i class="fa-solid fa-circle-xmark"></i></a>
+            <div class="login_container">
+                <div class="login_information">
+                    <video autoplay loop muted playsinline>
+                        <source src="images/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="right_side">
+                    <div class="login_register">
+                        <div class="functionality_type">
+                            <input type="radio" class="typeButton" name="login_register" value="login" id="login" checked onclick="showLoginOverlay('login')">
+                            <input type="radio" class="typeButton" name="login_register" value="register" id="register" onclick="showLoginOverlay('register')">
+                            <label for="login" class="typeLable" id="loginLable">Login</label>
+                            <label for="register" class="typeLable" id="registerLable">Register</label>
+                        </div>
+                    </div>
+                    
+                    <div class="login">
+                        <h2 class="heading">Hello there!</h2>
+                        <p class="subHeading">Welcome to the River of Life Church.</p>
+                        <form id="loginForm" onsubmit="event.preventDefault(); alert('Authentication functions require a backend service.');">
+                            <input type="text" placeholder="Username" required>
+                            <div class="password-container">
+                                <input type="password" placeholder="Password" id="password" required>
+                            </div>
+                            <button class="submit_btn" type="submit">Login</button>
+                        </form>
+                    </div>
+
+                    <div class="register" style="display: none;">
+                        <h2 class="heading">Create Account.</h2>
+                        <p class="subHeading">Let's Serve Together</p>
+                        <div class="form_wrapper">
+                            <form id="registerForm" onsubmit="event.preventDefault(); alert('Registration functions require a backend service.');">
+                                <div class="name-row" style="display: flex; gap: 10px;">
+                                    <input type="text" placeholder="First Name" required />
+                                    <input type="text" placeholder="Last Name" required />
+                                </div>
+                                <input type="email" placeholder="Email Address" required />
+                                <input type="password" placeholder="Password" required />
+                                <button type="submit" id="registerBtn">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="expanded-modal-scope">
+        <div id="productExpandedOverlay" class="product-expanded-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: none; justify-content: center; align-items: center; z-index: 2100;">
+            <div class="product-expanded-modal-content" style="background: #fff; padding: 25px; border-radius: 8px; width: 900px; max-width: 95%; max-height: 90vh; overflow-y: auto; position: relative;">
+            
+            <span id="closeExpandedBtn" style="position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #333;">&times;</span>
+
+            <section class="product-section">
+                <div class="product-wrapper">
+                <nav style="margin-bottom: 10px;">
+                    Back to <a style="text-decoration: none; color: #f1ac44;" id="prevPage" href="javascript:void(0)">Home</a> / <a id="currPage">Products</a>
+                </nav>
+                <div class="product-container">
+                    
+
+                    <div class="product-left">
+                    <img data-aos="fade-right" src="" alt="" id="dynamic-product-image" class="product-image">
+                    </div>
+
+                    <div class="product-right" data-aos="fade-left">
+                    <h2 class="product-title" id="dynamic-product-title">PRODUCT NAME</h2>
+                    <p class="product-description" id="dynamic-product-sub-desc">
+                        Loading description...
+                    </p>
+
+                    <p class="product-price" id="dynamic-product-price">R 0.00</p>
+
+                    <div class="product-rating">
+                        <div class="stars" id="dynamic-product-stars">
+                        </div>
+                        <span class="product-reviews" id="dynamic-product-review-count">( 0 reviews )</span>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="color-options">
+                        <h4 style="font-size: 16px; font-weight: 400;">COLOR</h4>
+                        <div class="color-btns">
+                            <button type="button" id="dynamic-product-color-btn" disabled>COLOR</button>
+                        </div>
+                        </div>
+
+                        <div class="size-options">
+                        <h4 style="font-size: 16px; font-weight: 400;">SIZES</h4>
+                        <div class="size-btns" id="dynamic-product-sizes-container">
+                            </div>
+                        </div>
+
+                        <div style="padding-left: 0 !important; " class="quantity">
+                        <input style="font-size: 16px;" type="number" min="1" value="1" max="10" id="quantity-input">
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="add-cart-btn" id="dynamic-add-cart-btn" data-id="" data-name="" data-price="">
+                        ADD TO CART
+                    </button>
+
+                    </div>
+                </div>
+                </div>
+
+                <div class="second-half">
+                    <div class="selection-slider">
+                        <div class="selection_type">
+                            <input type="radio" class="typeButton" name="login_register" value="description" id="description" checked>
+                            <input type="radio" class="typeButton" name="login_register" value="reviews" id="reviews">
+
+                            <label for="description" id="descriptionLable" class="typeLable">DESCRIPTION</label>
+                            <label for="reviews" id="reviewsLable" class="typeLable">REVIEWS</label>
+
+                            <span class="functionality_type-selection"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="product_description">
+                    <div class="product_description_wrapper">
+                        <div class="description_content">
+                            <div class="only_description">
+                                <p id="dynamic-product-detailed-desc">No description available.</p>
+                            </div>
+                        </div>
+
+                        <div class="fit-sizing">
+                        <h2 class="slider_headings">Unisex Clothing / Conversion & Measurement Chart</h2>
+                        <p>
+                        Please note that River of Life Church unisex t-shirts, and hoodies are tailored to fit the measurements listed below.
+                        </p>
+
+                        <table>
+                        <thead>
+                            <tr>
+                            <th colspan="7">UNISEX ROLC TOPS / BOTTOMS</th>
+                            </tr>
+                            <tr>
+                            <th>MEASUREMENT</th>
+                            <th>XS</th>
+                            <th>S</th>
+                            <th>M</th>
+                            <th>L</th>
+                            <th>XL</th>
+                            <th>XXL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>EU SIZE</td>
+                            <td>28</td>
+                            <td>30</td>
+                            <td>32</td>
+                            <td>34</td>
+                            <td>36</td>
+                            <td>38</td>
+                            </tr>
+                            <tr>
+                            <td>CHEST (CM)</td>
+                            <td>85</td>
+                            <td>90</td>
+                            <td>95</td>
+                            <td>100</td>
+                            <td>105</td>
+                            <td>110</td>
+                            </tr>
+                            <tr>
+                            <td>NATURAL WAIST (CM)</td>
+                            <td>75</td>
+                            <td>80</td>
+                            <td>85</td>
+                            <td>90</td>
+                            <td>95</td>
+                            <td>100</td>
+                            </tr>
+                            <tr>
+                            <td>HIP (CM)</td>
+                            <td>89</td>
+                            <td>94</td>
+                            <td>99</td>
+                            <td>104</td>
+                            <td>109</td>
+                            <td>114</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </section>
+                
+                <section class="reviews">
+                    <div class="reviews-section">
+                        <div class="reviews-header">
+                            <h2 class="slider_headings">Customer Reviews</h2>
+                            <a href="javascript:void(0)" class="triggerReview">Write A Review</a>
+                        </div>
+
+                        <div id="dynamic-reviews-target-container">
+                            </div>
+
+                    </div>
+                </section>
+            </section>
+
+            </div>
+        </div>
+    </div>
+
+      <script>
+    //function to toggle Description/Reviews sections
+    function toggleSections(showReviews) {
+        const descriptionDiv = document.querySelector('.product_description');
+        const reviewsDiv = document.querySelector('.reviews');
+
+        if (showReviews) {
+            descriptionDiv.style.display = 'none';
+            reviewsDiv.style.display = 'block';
+        } else {
+            descriptionDiv.style.display = 'block';
+            reviewsDiv.style.display = 'none';
+        }
+    }
+
+    //radio button change listener
+    document.addEventListener('change', function(e) {
+        if (e.target.classList.contains('typeButton')) {
+            toggleSections(e.target.id === 'reviews');
+        }
+    });
+  </script>
+
+    <style>
+    @keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+    }
+    </style>
+
+    <div id="testimonyOverlay" class="testimony-overlay">
+        <div class="testimony-overlay-content">
+            <div class="all-header">
+                <h2>Rate Our Shop</h2>
+                <p class="text-muted">Share your shopping experience with us.</p>
+            </div>
+            <span class="testimony-close-btn" id="testimonyCloseBtn">&times;</span>
+            
+            <form action="#" method="POST" onsubmit="event.preventDefault(); if(validateForm()){ alert('Demo Mode: Thank you for your support!'); document.getElementById('testimonyOverlay').style.display = 'none'; document.body.style.overflow = 'auto'; }">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="Your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Your last name" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Your city or region" required>
+                </div>
+                
+                <div class="rating-container">
+                    <span class="rating-label">Your Rating</span>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5" required>
+                        <label for="star5">★</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">★</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">★</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">★</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">★</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comment">Comments</label>
+                    <textarea id="comment" name="comment" placeholder="Tell us about your experience... (max: 50 words)" required></textarea>
+                </div>
+                
+                <input type="submit" value="Submit Rating">
+            </form>
+            <p class="disclaimer">
+                By submitting your rating, you consent to it being publicly displayed on our website.
+            </p>
+        </div>
+    </div>
+
+    <div id="productReviewOverlay" class="product-review-overlay">
+        <div class="product-review-overlay-content">
+            <div class="all-header">
+                <h2>Write a Product Review</h2>
+                <p class="text-muted">Share your experience with this product.</p>
+            </div>
+            <span class="product-review-close-btn" id="productReviewCloseBtn">&times;</span>
+            
+            <div class="order-items">
+                <h3 style="font-weight: 400;">Item to review:</h3>
+                <div class="order-item">
+                    <img src="images/stock.jpg" alt="Grace T-Shirt" id="review-modal-item-image" class="item-image">
+                    <div class="item-details">
+                        <div class="item-name" id="review-modal-item-name">Grace T-Shirt</div>
+                    </div>
+                    <div class="item-total" id="review-modal-item-total">
+                        R250.00
+                    </div>
+                </div>
+            </div>
+
+            <form action="#" method="POST" onsubmit="event.preventDefault(); if(validateForm()){ alert('Demo Mode: Thank you for your support!'); document.getElementById('productReviewOverlay').style.display = 'none'; document.body.style.overflow = 'auto'; }">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="product_first_name">First Name</label>
+                        <input type="text" id="product_first_name" name="first_name" value="John" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="product_last_name">Last Name</label>
+                        <input type="text" id="product_last_name" name="last_name" value="Doe" disabled>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="product_review_title">Review Title</label>
+                    <input type="text" id="product_review_title" name="title" placeholder="Brief summary of your review" required>
+                </div>
+                
+                <div class="product-review-rating-container">
+                    <span class="product-review-rating-label">Your Rating</span>
+                    <div class="product-review-stars">
+                        <input type="radio" id="product_star5" name="rating" value="5" required>
+                        <label for="product_star5">★</label>
+                        <input type="radio" id="product_star4" name="rating" value="4">
+                        <label for="product_star4">★</label>
+                        <input type="radio" id="product_star3" name="rating" value="3">
+                        <label for="product_star3">★</label>
+                        <input type="radio" id="product_star2" name="rating" value="2">
+                        <label for="product_star2">★</label>
+                        <input type="radio" id="product_star1" name="rating" value="1">
+                        <label for="product_star1">★</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="product_comment">Your Review</label>
+                    <textarea id="product_comment" name="comment" placeholder="Tell us about your experience with this product... (max: 50 words)" required></textarea>
+                </div>
+                
+                <input type="hidden" name="product_id" id="review-modal-product-id" value="1">
+                <input type="submit" class="submit-review" value="Submit Review">
+                
+            </form>
+            <p class="product-review-disclaimer">
+                By submitting your review, you consent to it being publicly displayed on our website.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    
+    // Dynamic Review Form Data Extraction Engine
+    function openProductReviewOverlay() {
+        // 1. Extract values dynamically from active expanded item layout nodes
+        const activeImg = document.getElementById('dynamic-product-image');
+        const activeTitle = document.getElementById('dynamic-product-title');
+        const activePrice = document.getElementById('dynamic-product-price');
+        const activeCartBtn = document.getElementById('dynamic-add-cart-btn');
+
+        const imgSrc = activeImg ? activeImg.getAttribute('src') : 'images/stock.jpg';
+        const productName = activeTitle ? activeTitle.textContent.trim() : 'Product Item';
+        const productPrice = activePrice ? activePrice.textContent.trim() : 'R 0.00';
+        const productId = activeCartBtn ? activeCartBtn.getAttribute('data-id') : '1';
+
+        // 2. Map and inject parameters straight into the Review Overlay Form Layout
+        const targetImg = document.getElementById('review-modal-item-image');
+        const targetName = document.getElementById('review-modal-item-name');
+        const targetPrice = document.getElementById('review-modal-item-total');
+        const targetHiddenId = document.getElementById('review-modal-product-id');
+
+        if (targetImg) {
+            targetImg.setAttribute('src', imgSrc);
+            targetImg.setAttribute('alt', productName);
+        }
+        if (targetName) targetName.textContent = productName;
+        if (targetPrice) targetPrice.textContent = productPrice;
+        if (targetHiddenId) targetHiddenId.value = productId;
+
+        // 3. Clear out old layout states from the text inputs for a fresh entry
+        const reviewTitleInput = document.getElementById('product_review_title');
+        const reviewCommentInput = document.getElementById('product_comment');
+        if (reviewTitleInput) reviewTitleInput.value = '';
+        if (reviewCommentInput) reviewCommentInput.value = '';
+        
+        document.querySelectorAll('input[name="rating"]').forEach(radio => radio.checked = false);
+
+        // 4. Reveal interface window container viewport layers safely
+        const reviewOverlay = document.getElementById('productReviewOverlay');
+        if (reviewOverlay) {
+            reviewOverlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeProductReviewOverlay() {
+        const reviewOverlay = document.getElementById('productReviewOverlay');
+        if (reviewOverlay) {
+            reviewOverlay.style.display = 'none';
+        }
+        
+        // Return scroll state to the window only if the primary product modal is also closed
+        const primaryModal = document.getElementById('productExpandedOverlay');
+        if (!primaryModal || primaryModal.style.display === 'none') {
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    // FIX: Attach event listeners using Event Delegation to catch dynamic triggers safely
+    document.addEventListener('click', function(event) {
+        // Search if the clicked element (or its closest parent) contains our class
+        if (event.target && event.target.classList.contains('triggerReview')) {
+            event.preventDefault();
+            openProductReviewOverlay();
+        }
+    });
+
+    const reviewCloseBtn = document.getElementById('productReviewCloseBtn');
+    if (reviewCloseBtn) {
+        reviewCloseBtn.addEventListener('click', closeProductReviewOverlay);
+    }
+});
+
+// Word counting validation routine
+function countWords(str) {
+    return str.trim() ? str.trim().split(/\s+/).length : 0;
+}
+
+// Submission compliance checking module
+function validateForm() {
+    const ratingSelected = document.querySelector('input[name="rating"]:checked');
+    if (!ratingSelected) {
+        alert('Please select a rating before submitting.');
+        return false;
+    }
+    
+    const textarea = document.getElementById('product_comment');
+    if (textarea) {
+        const wordCount = countWords(textarea.value);
+        if (wordCount > 50) {
+            alert('Your review exceeds the 50 word limit. Please shorten your text. Currently: ' + wordCount + ' words.');
+            return false;
+        }
+    }
+    return true;
+}
+    </script>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="store-functionalities.js"></script>
+    <script src="store.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const overlay = document.getElementById('productExpandedOverlay');
+            const closeBtn = document.getElementById('closeExpandedBtn');
+            // --- DEMO MODE: ADD TO CART ALERT ENGINE ---
+            document.addEventListener('click', function(event) {
+                // Check if the clicked element has the class 'add-cart-btn'
+                if (event.target && event.target.classList.contains('add-cart-btn')) {
+                    event.preventDefault(); // Prevent standard execution loops
+                    
+                    // Extract metrics from data-attributes or use standard fallbacks
+                    const productName = event.target.getAttribute('data-name') || 'this item';
+                    const productPrice = event.target.getAttribute('data-price') || '0.00';
+                    
+                    // Trigger the compliance demo alert wrapper
+                    alert(`Demo Mode: "${productName}" (R ${productPrice}) cannot be added to the cart right now. Thank you for your support!`);
+                }
+            });
+
+            // 1. Listen for user clicks on a product image or item title inside store_home
+            document.querySelectorAll('.product-card img, .prod_name').forEach(element => {
+                element.style.cursor = 'pointer';
+                element.addEventListener('click', function() {
+                    // Find the nearest wrapper container housing that card's context data
+                    const cardWrapper = this.closest('.card-wrapper') || this.closest('td');
+                    if (!cardWrapper) return;
+
+                    // Gather standard values from targets or fallback options
+                    const productCard = cardWrapper.querySelector('.product-card');
+                    const productId = productCard ? productCard.getAttribute('data-product-id') : '1';
+                    const imgEl = cardWrapper.querySelector('.product-img') || cardWrapper.querySelector('img');
+                    const imgSrc = imgEl ? imgEl.getAttribute('src') : 'jacket.png';
+                    
+                    const nameEl = cardWrapper.querySelector('.prod_name');
+                    const productName = nameEl ? nameEl.textContent.trim() : 'Product Item';
+                    
+                    const priceEl = cardWrapper.querySelector('.price');
+                    const productPrice = priceEl ? priceEl.textContent.trim() : 'R 0.00';
+                    const cleanNumericPrice = productPrice.replace('R', '').trim();
+
+                    // 2. Mock definitions mapping matching catalog specs (simulating a database fetch)
+                    const productCatalogData = {
+                        "1": {
+                            subDesc: "Premium collection worship team ministry apparel.",
+                            detailedDesc: "Celebrate faith, hope, and worship in full comfort. This limited premium collection garment offers exceptional breathability, tailored comfort spacing, and durable structural seams built for continuous daily wear.",
+                            color: "NAVY",
+                            sizes: ["S", "M", "L"],
+                            rating: 4.5,
+                            reviewsCount: 2,
+                            reviewsList: [
+                                { title: "Excellent Service", text: "The fabric thickness is outstanding and shipping to Grahamstown was completely hassle-free.", author: "S. KHUMALO", date: "12/05/2026", rating: 5 },
+                                { title: "Great Fit", text: "Fits perfectly right around the shoulders. Will look forward to purchasing other colors soon.", author: "M. VAN DER MERWE", date: "18/05/2026", rating: 4 }
+                            ]
+                        },
+                        "2": {
+                            subDesc: "Heavyweight faith-based protective outerwear.",
+                            detailedDesc: "Shield yourself from seasonal elements while celebrating truth. Features reinforced double-needle pocket insulation linings and custom drop-shoulder alignment loops.",
+                            color: "COBALT BLUE",
+                            sizes: ["M", "L", "XL"],
+                            rating: 5.0,
+                            reviewsCount: 1,
+                            reviewsList: [
+                                { title: "Very Warm", text: "Incredibly thick fleece interior layer. Keeps winds out completely during early morning prayers.", author: "A. SMITH", date: "22/05/2026", rating: 5 }
+                            ]
+                        }
+                    };
+
+                    // Pull specific information profiles matching selection or use standard generic properties
+                    const data = productCatalogData[productId] || {
+                        subDesc: "River of Life premium store collection asset item.",
+                        detailedDesc: "High quality specialized ministry design selection item built from premium grade long-staple threads for optimal everyday wear comfort parameters.",
+                        color: "STANDARD",
+                        sizes: ["M"],
+                        rating: 5,
+                        reviewsCount: 0,
+                        reviewsList: []
+                    };
+
+                    // 3. Inject attributes into your HTML elements template blocks
+                    document.getElementById('dynamic-product-image').setAttribute('src', imgSrc);
+                    document.getElementById('dynamic-product-image').setAttribute('alt', productName);
+                    document.getElementById('dynamic-product-title').textContent = productName.toUpperCase();
+                    document.getElementById('dynamic-product-sub-desc').textContent = data.subDesc;
+                    document.getElementById('dynamic-product-price').textContent = productPrice;
+                    document.getElementById('dynamic-product-color-btn').textContent = data.color;
+                    document.getElementById('dynamic-product-detailed-desc').textContent = data.detailedDesc;
+                    document.getElementById('dynamic-product-review-count').textContent = `( ${data.reviewsCount} reviews )`;
+
+                    // Adjust Cart tracking parameter tags
+                    const cartBtn = document.getElementById('dynamic-add-cart-btn');
+                    cartBtn.setAttribute('data-id', productId);
+                    cartBtn.setAttribute('data-name', productName);
+                    cartBtn.setAttribute('data-price', cleanNumericPrice);
+
+                    // Generate size selector buttons blocks dynamically
+                    const sizeContainer = document.getElementById('dynamic-product-sizes-container');
+                    sizeContainer.innerHTML = '';
+                    data.sizes.forEach(size => {
+                        const btn = document.createElement('button');
+                        btn.type = "button";
+                        btn.setAttribute('data-size', size);
+                        btn.textContent = size;
+                        
+                        // Keep default class or style hooks active dynamically on selection state changes
+                        btn.addEventListener('click', function() {
+                            sizeContainer.querySelectorAll('button').forEach(b => b.style.borderColor = '');
+                            this.style.borderColor = '#f1ac44';
+                        });
+                        sizeContainer.appendChild(btn);
+                    });
+
+                    // Generate static star icons matching rating fields
+                    const starsContainer = document.getElementById('dynamic-product-stars');
+                    starsContainer.innerHTML = '';
+                    const fullStars = Math.floor(data.rating);
+                    for (let i = 0; i < fullStars; i++) {
+                        starsContainer.innerHTML += '<i class="bi bi-star-fill"></i> ';
+                    }
+                    if (data.rating % 1 !== 0) {
+                        starsContainer.innerHTML += '<i class="bi bi-star-half"></i> ';
+                    }
+                    const emptyStarsCount = 5 - Math.ceil(data.rating);
+                    for (let i = 0; i < emptyStarsCount; i++) {
+                        starsContainer.innerHTML += '<i class="bi bi-star"></i> ';
+                    }
+
+                    // Generate review card list wrappers dynamically 
+                    const reviewsContainer = document.getElementById('dynamic-reviews-target-container');
+                    reviewsContainer.innerHTML = '';
+                    if (data.reviewsList.length > 0) {
+                        data.reviewsList.forEach((rev, index) => {
+                            if (index > 0) reviewsContainer.innerHTML += '<hr>';
+                            
+                            const starString = '★'.repeat(rev.rating) + '☆'.repeat(5 - rev.rating);
+                            reviewsContainer.innerHTML += `
+                                <div class="review">
+                                <div class="stars" style="color: #ffc107;">${starString}</div>
+                                <h3 class="review-title">${rev.title}</h3>
+                                <p class="review-text">${rev.text}</p>
+                                <div class="review-footer">
+                                    <span class="reviewer-name">${rev.author}</span>
+                                    <span class="review-date">${rev.date}</span>
+                                </div>
+                                </div>
+                            `;
+                        });
+                    } else {
+                        reviewsContainer.innerHTML = '<p>No reviews yet. Be the first to <a href="javascript:void(0)" class="triggerReview">write a review.</a></p>';
+                    }
+
+                    // 4. Open overlay and lock scrollbars safely
+                    overlay.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Re-bind click event on newly added review trigger tags
+                    overlay.querySelectorAll('.triggerReview').forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            const revOverlay = document.getElementById('productReviewOverlay');
+                            if (revOverlay) revOverlay.style.display = 'flex';
+                        });
+                    });
+                });
+            });
+
+            // Toggle close event logic loop
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    overlay.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            }
+        });
+            const faqButtons = document.querySelectorAll(".faq-btn");
+            faqButtons.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    const answer = btn.nextElementSibling;
+                    const span = btn.querySelector("span");
+
+                    //toggle visibility of the answer
+                    if (answer.style.display === "block") {
+                        answer.style.display = "none";
+                        span.textContent = "+";
+                    } else {
+                        answer.style.display = "block";
+                        span.textContent = "–";
+                    }
+                });
+            });
+        function showLoginOverlay(section) {
+            const loginDiv = document.querySelector('.login');
+            const registerDiv = document.querySelector('.register');
+            const overlay = document.querySelector('.login_overlay');
+            
+            if (!overlay) return;
+            
+  
+            overlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
+            if (section === 'login') {
+                if (loginDiv) loginDiv.style.display = 'block';
+                if (registerDiv) registerDiv.style.display = 'none';
+                const radioLogin = document.getElementById('login');
+                if (radioLogin) radioLogin.checked = true;
+            } else if (section === 'register') {
+                if (loginDiv) loginDiv.style.display = 'none';
+                if (registerDiv) registerDiv.style.display = 'block';
+                const radioRegister = document.getElementById('register');
+                if (radioRegister) radioRegister.checked = true;
+            }
+        }
+
+            function closeLoginOverlay() {
+                const overlay = document.querySelector('.login_overlay');
+                if (overlay) {
+                    overlay.style.display = 'none';
+                    document.body.style.overflow = 'auto'; 
+                }
+            }
+
+        document.querySelectorAll('.faq-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const span = button.querySelector('span');
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    span.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    span.textContent = '-';
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            //core handler tracking element instantiation checks
+            const testimonyOpenBtn = document.getElementById('testimonyOpenBtn');
+            const testimonyCloseBtn = document.getElementById('testimonyCloseBtn');
+            const testimonyOverlay = document.getElementById('testimonyOverlay');
+
+            //open rating system view
+            if (testimonyOpenBtn && testimonyOverlay) {
+                testimonyOpenBtn.addEventListener('click', function(e) {
+                    e.preventDefault(); //prevents page from jumping to top tracking anchor states
+                    testimonyOverlay.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            //close rating system view
+            if (testimonyCloseBtn && testimonyOverlay) {
+                testimonyCloseBtn.addEventListener('click', function() {
+                    testimonyOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            }
+        });
+
+        //word counter checking metrics
+        function countWords(str) {
+            return str.trim() ? str.trim().split(/\s+/).length : 0;
+        }
+
+        //modal verification rules evaluation engine
+        function validateForm() {
+            const ratingSelected = document.querySelector('input[name="rating"]:checked');
+            if (!ratingSelected) {
+                alert('Please select a rating before submitting.');
+                return false;
+            }
+            
+            const textarea = document.getElementById('comment');
+            if (textarea) {
+                const wordCount = countWords(textarea.value);
+                if (wordCount > 50) {
+                    alert('Your comment exceeds the 50 word limit. Please shorten your text. Currently: ' + wordCount + ' words.');
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

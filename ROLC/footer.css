@@ -1,0 +1,577 @@
+/*main colours used by the system*/
+:root {
+  --main-yellow: #f1ac44;
+  --main-yellow-hover: #f1bc6c;
+  --lighter-yellow: #fff700;
+  --main-black: #000000;
+  --main-white: #fff;
+  --text-grey: #9c9da3;
+  --backgroung-grey: #ddd;
+  --border-colour: #dddddda2;
+}
+
+/*footer*/
+.footer-home { 
+  background-color: #111111;
+  color: #ffffff;
+  padding: 40px 60px 20px;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;            
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: auto;
+  box-sizing: border-box;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;         
+  gap: 40px;                      
+  flex: 1;    
+  box-sizing: border-box;
+  max-width: 100%;                 
+}
+
+.footerColumn {
+  flex: 1;
+  min-width: 200px;                
+}
+
+.logo-footer img {
+  width: 60px;
+  height: auto;
+}
+
+.logo-footer #logo-AK {
+  width: 150px;
+  height: auto;
+  padding-top: 15px;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 10px;
+}
+
+.footer-heading {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+}
+
+.footerColumn p,
+.footerColumn a {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  margin: 4px 0;
+  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.footerColumn a:hover {
+  color: var(--main-yellow);
+}
+
+.footerBTM {
+  border-top: 1px solid white;
+  padding-top: 15px;
+  font-size: 12px;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerBTM p {
+  margin: 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a, .contacts a {
+  position: relative;
+  overflow: hidden;          
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.5s ease;
+  margin: 0;
+}
+
+.contacts p {
+  display: flex;    
+  align-items: center;        
+  gap: 12px;                 
+  margin: 8px 0;    
+          
+}
+.contacts a {
+
+  margin: 0;
+  width: 35px;
+  height: 35px;
+    border-radius: 50%;
+}
+
+.social-icons i, .contacts i{
+  position: absolute;
+  font-size: 20px;
+  transition: transform 0.5s ease;
+}
+
+/*Cool hover transition, white icon slides to left on hover and black icon slides into frame*/
+.social-icons .front, .contacts .front {
+  color: white;
+  transform: translateX(0);
+  font-size: 20px;
+  transition: transform 0.5s ease;
+}
+
+
+.social-icons .back, .contacts .back {
+  color: white;
+  font-size: 20px;
+  transform: translateX(200%);
+  transition: transform 0.5s ease;
+}
+
+.contacts .back , .contacts .front{
+  font-size: 14px;
+}
+
+
+.social-icons a:hover .front, .contacts a:hover .front{
+  transform: translateX(-200%);
+  transition: transform 0.5s ease;
+
+}
+
+.social-icons a:hover .back , .contacts a:hover .back{
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+
+.contacts #default-link:hover{
+  background: var(--main-white);
+  border-color: var(--main-white);
+  color: #111111;
+  transition: background 0.5s ease;
+}
+.contacts #default-link:hover i{
+   color: #111111;
+}
+
+.social-icons #fb-link:hover {
+  background: #0668fd;
+  border-color: #0668fd;
+  color: white;
+  transition: background 0.5s ease;
+}
+
+.social-icons #wa-link:hover {
+  background: #25D366 ;
+  border-color: #25D366 ;
+  color: white;
+  transition: background 0.5s ease;
+}
+
+.social-icons #ig-link:hover {
+  background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
+  border-color: #ee2a7c27;
+  color: white;
+  transition: background 0.5s ease;
+}
+
+#newsLetterEmail{
+  position: relative;
+  border-radius: 120px;
+  background: transparent;
+  border: 1 solid white;
+  color: white;
+}
+
+/*Newsketter-btn*/
+#newsLetter-btn{
+  position: absolute;
+  right: 65px;
+  bottom: 562px;
+  width: 30px;
+  height: 30px;
+}
+
+.footerColumn .fa-paper-plane{
+  font-size: 12px;
+}
+
+.footerColumn .front {
+  color: white;
+  transform: translate(0, 0);
+  transition: transform 0.5s ease;
+}
+
+.footerColumn .back {
+  color: white;
+  transform: translate(-200%, 200%);
+  transition: transform 0.5s ease;
+}
+
+.footerColumn a:hover .front {
+  transform: translate(200%, -200%);
+  transition: transform 0.5s ease;
+}
+
+.footerColumn a:hover .back {
+  transform: translate(0, 0);
+  transition: transform 0.5s ease;
+}
+
+.footerColumn #newsLetter-btn:hover {
+  background: #768bc2;
+  border-color: #768bc2;
+  color: white;
+  transition: background 0.5s ease;
+}
+
+/*location-btn*/
+#location-btn{
+  position: absolute;
+  left: 270px;
+  top: 105px;
+  width: 30px;
+  height: 30px;
+}
+
+.textContent .fa-earth{
+  font-size: 18px;
+}
+
+.textContent .front {
+  color: white;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+
+.textContent .back {
+  color: #608632;
+  transform: translateX(-200%);
+  transition: transform 0.5s ease;
+}
+
+.textContent a:hover .front {
+  transform: translateX(200%);
+  transition: transform 0.5s ease;
+}
+
+.textContent a:hover .back {
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+
+.textContent #location-btn:hover {
+  background: white;
+  border-color: white;
+  transition: background 0.5s ease;
+}
+
+/*footer responsiveness*/
+@media screen and (max-width: 1200px) {
+  .footer-home {
+    padding: 40px 40px 20px;
+    height: auto;
+    min-height: 80vh;
+  }
+  
+  .footerContainer {
+    gap: 30px;
+  }
+  
+  #newsLetter-btn {
+    right: 45px;
+    bottom: auto;
+  }
+  
+  #location-btn {
+    left: 220px;
+    top: 95px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footer-home {
+    padding: 30px 30px 20px;
+  }
+  
+  .footerContainer {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .footerColumn {
+    flex: 1 1 calc(50% - 30px);
+    min-width: 180px;
+  }
+  
+  #newsLetter-btn {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 10px;
+  }
+  
+  #location-btn {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin-left: 10px;
+  }
+  
+  .contacts p {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-home {
+    padding: 25px 20px 15px;
+    min-height: auto;
+  }
+  
+  .footerContainer {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .footerColumn {
+    flex: 1 1 100%;
+    min-width: 100%;
+    text-align: center;
+  }
+  
+  .logo-footer {
+    text-align: center;
+  }
+  
+  .logo-footer img {
+    width: 50px;
+  }
+  
+  .logo-footer #logo-AK {
+    width: 120px;
+  }
+  
+  .footer-heading {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+  
+  .footerColumn p,
+  .footerColumn a {
+    font-size: 13px;
+    margin: 3px 0;
+    margin-top: 15px;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+  
+  .contacts p {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .footerBTM {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  .social-icons a,
+  .contacts a {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .social-icons i,
+  .contacts i {
+    font-size: 18px;
+  }
+  
+  .contacts .back,
+  .contacts .front {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-home {
+    padding: 20px 15px 15px;
+  }
+  
+  .footer-tagline {
+    font-size: 13px;
+  }
+  
+  .footerColumn p,
+  .footerColumn a {
+    font-size: 12px;
+  }
+  
+  .footerBTM {
+    font-size: 11px;
+  }
+  
+  .social-icons {
+    gap: 8px;
+  }
+  
+  .social-icons a,
+  .contacts a {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .social-icons i,
+  .contacts i {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-home {
+    padding: 15px 10px 10px;
+  }
+  
+  .footerContainer {
+    gap: 20px;
+  }
+  
+  .footerColumn {
+    margin-bottom: 10px;
+  }
+  
+  .logo-footer #logo-AK {
+    width: 100px;
+  }
+  
+  .footer-heading {
+    font-size: 10px;
+  }
+  
+  .footerColumn p,
+  .footerColumn a {
+    font-size: 11px;
+    margin-top: 12px;
+  }
+  
+  .contacts p {
+    gap: 8px;
+  }
+  
+  .social-icons a,
+  .contacts a {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .social-icons i,
+  .contacts i {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .footer-home {
+    padding: 12px 8px 8px;
+  }
+  
+  .footerColumn p,
+  .footerColumn a {
+    font-size: 10px;
+  }
+  
+  .social-icons {
+    gap: 6px;
+  }
+  
+  .social-icons a,
+  .contacts a {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .social-icons i,
+  .contacts i {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .textContent,
+  .footerColumn .fa-paper-plane,
+  .textContent .fa-earth {
+    position: static !important;
+    transform: none !important;
+  }
+  
+  #newsLetter-btn,
+  #location-btn {
+    position: static !important;
+    display: inline-block;
+    margin: 5px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .contactColumn.contacts p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (hover: none) {
+  .social-icons a:hover,
+  .contacts a:hover {
+    background: transparent;
+    border-color: white;
+  }
+  
+  .social-icons a:hover .front,
+  .contacts a:hover .front {
+    transform: none;
+  }
+  
+  .social-icons a:hover .back,
+  .contacts a:hover .back {
+    transform: none;
+  }
+}

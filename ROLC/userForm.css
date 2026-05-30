@@ -1,0 +1,99 @@
+/* General reset and font */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form card */
+form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+/* Form heading */
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form groups for label & input */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input focus effect */
+form input:focus,
+form select:focus {
+    border-color: #1fb0e9;
+    box-shadow: 0 0 5px rgba(31,176,233,0.5);
+    outline: none;
+}
+
+/* Buttons */
+form input[type="submit"],
+form input[type="reset"] {
+    width: 48%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"] {
+    background-color: #1fb0e9;
+    color: white;
+    margin-right: 4%;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0784b6;
+}
+
+form input[type="reset"] {
+    background-color: #ccc;
+    color: #333;
+}
+
+form input[type="reset"]:hover {
+    background-color: #999;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 500px) {
+    form input[type="submit"],
+    form input[type="reset"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

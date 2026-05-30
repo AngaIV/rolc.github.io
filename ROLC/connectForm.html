@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Form - River of Life Church</title>
+    
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="connectForm.css">
+    <link rel="stylesheet" href="donation_overlay.css">
+    <link rel="stylesheet" href="login.css">
+    
+    <link rel="icon" type="image/x-icon" href="images/churchLogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=apps" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        AOS.init({
+          duration: 1000,
+          once: true
+        });
+      });
+    </script>
+</head>
+<body>
+
+    <div class="back2top-container">
+        <a class="back2top-btn" href=""><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
+    <header class="nav_bar">
+        <div class="web_header">
+            <div class="header_content">
+                <div class="social-icons">
+                    <a class="fb-link icon" href="https://www.facebook.com/riveroflife.gtn/">
+                        <i class="fa-brands fa-facebook front"></i>
+                        <i class="fa-brands fa-facebook back"></i>
+                    </a>
+                    <a class="ig-link icon" href="https://www.instagram.com/river.oflifechurch/">
+                        <i class="fa-brands fa-instagram front"></i>
+                        <i class="fa-brands fa-instagram back"></i>
+                    </a>
+                    <a class="yt-link icon" href="http://www.youtube.com/@riveroflifechurchgrahamsto603">
+                        <i class="fa-brands fa-youtube front"></i>
+                        <i class="fa-brands fa-youtube back"></i>
+                    </a>
+                </div>
+
+                <nav class="navMenu">
+                    <a class="header_nav" href="index.html">HOME</a>
+                    <a class="header_nav" href="about.html">ABOUT</a>
+                    <a class="header_nav" href="services.html">SERVICES</a>
+                </nav>
+
+                <a id="logo_nav" href="index.html">
+                    <img src="images/churchLogo.png" alt="web_logo" class="web_logo white-logo" width="50px" height="50px" style="display: block;">
+                    <img src="images/churchLogoBlack.png" alt="web_logo" class="web_logo black-logo" width="50px" height="50px" style="display: none;">
+                </a>
+
+                <nav class="navMenu">
+                    <a class="header_nav" href="store_home.html">STORE</a>
+                    <a class="header_nav" onclick="showDonationOverlay()">DONATE</a>
+                    <div class="navDropdown">
+                        <a class="header_nav more_btn" href="#">MORE <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="connectForm.html"><i class="bi bi-person-plus"></i> CONNECT</a>
+                            <a href="Serving.html"><i class="fa-regular fa-handshake"></i> VOLUNTEER</a>
+                            <a href="eventsPage.html"><i class="fa-regular fa-calendar"></i> EVENTS</a>
+                            <a href="contact.html"><i class="fa-regular fa-address-book"></i> CONTACT</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="isLoggedIn">
+                    <div class="visit-btn">
+                        <button onclick="showLoginOverlay('login')" class="VisitUsButton">LOGIN</button>
+                    </div>
+                </div>
+                <div class="menu-toggle">&#9776;</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="connect-groups">
+        <div class="hero">
+            <div data-aos="fade-right">
+                <h2>Connect Groups</h2>
+                <nav>
+                    <a id="prevPage" href="index.html">Home</a> / <a id="currPage">Connect</a>
+                </nav>
+            </div>
+        </div>
+        <div class="subtext" data-aos="fade-up"> 
+            <p>
+                Join a Connect Group and build meaningful relationships while growing in faith together. <br>
+                Our small groups meet weekly to study God's word, share life, and support one another.
+            </p>
+            <p style=\"font-size: 15px;\">
+                <strong>Weekly meetings</strong><br>
+                8-12 people per group<br>
+                All ages welcome
+            </p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); alert('Demo Mode: Connect group sign-up received successfully!');"> 
+           
+            <div class="form" data-aos="fade-up">
+                <div class="form-header">
+                    <h2>Join a Connect Group</h2>
+                    <p>Fill out the form below to get started</p>
+                </div>
+
+                <div class="form-body">
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" name="fname" id="fname" maxlength="50" required placeholder="Enter first name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="surname">Surname</label>
+                        <input type="text" name="surname" id="surname" maxlength="50" required placeholder="Enter surname">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email_address">Email Address</label>
+                        <input type="email" name="email_address" id="email_address" maxlength="100" required placeholder="Enter email address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pNumber">Phone Number</label>
+                        <input type="tel" name="pNumber" id="pNumber" maxlength="10" required placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clocation">Connect Group Location</label>
+                        <select name="clocation" id="clocation" required>
+                            <option value="">-- Select Connect Location --</option>
+                            <option value="LawrenceStreet">Lawrence Street (Sunnyside)</option>
+                            <option value="GrantStreet">Grant Street (Spar Area)</option>
+                            <option value="FitzroyStreet">Fitzroy Street (Kingswood Area)</option>
+                            <option value="IrvingStreet">Irving Street (Coloured Area)</option>
+                            <option value="Extension9">Extension 9 (Joza Location)</option>
+                            <option value="OliveSchreiner">Olive Schreiner (Rhodes Campus)</option>
+                            <option value="PostGradVillage">Post Grad Village (Rhodes Campus)</option>
+                            <option value="MiriamMakeba">Miriam Makeba Dining Hall (Rhodes Campus)</option>
+                            <option value="DovesOnHuntly">Doves on Huntly (Complex opposite Church)</option>
+                            <option value="Salisbury">Salisbury (Rhodes Campus)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group buttons">
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <button type="reset" class="reset-btn">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer-home">
+        <div class="footerContainer">
+            
+            <div class="footerColumn">
+                <a href="index.html" style="text-decoration: none;">
+                    <div class="logo-footer">
+                        <img id="churchLogo" src="images/churchLogo.png" alt="Church Logo" width="100px" height="100px">
+                    </div>
+                </a>
+            </div>
+
+            <div class="footerColumn">
+                <h4 class="footer-heading">QUICK LINKS</h4>
+                <a href="index.html" class="footerLink">Home</a>
+                <a href="about.html" class="footerLink">About</a>
+                <a href="services.html" class="footerLink">Services</a>
+                <a href="store_home.html" class="footerLink">Store</a>
+            </div>
+
+            <div class="footerColumn">
+                <h4 class="footer-heading">OPERATING HOURS</h4>
+                <p>Thursday – Friday: 18:00 – 19:30</p>
+                <p>Sunday: 08:30 – 13:00</p>
+            </div>
+
+            <div class="footerColumn">
+                <h4 class="footer-heading">Social Media</h4>            
+                <div class="social-icons">
+                    <a id="fb-link" href="https://m.facebook.com/riveroflife.gtn/about/">
+                        <i class="fa-brands fa-facebook front"></i>
+                        <i class="fa-brands fa-facebook back"></i>
+                    </a>
+                    <a id="ig-link" href="https://www.instagram.com/river.oflifechurch?igsh=eGo4bTV6OWJkaWU5">
+                        <i class="fa-brands fa-instagram front"></i>
+                        <i class="fa-brands fa-instagram back"></i>
+                    </a>
+                    <a id="wa-link" href="https://chat.whatsapp.com/FtGZdZcZZIe4s34CnvZNJa?mode=ems_copy_t">
+                        <i class="fa-brands fa-whatsapp front"></i>
+                        <i class="fa-brands fa-whatsapp back"></i>
+                    </a>
+                    <a class="yt-link icon" href="http://www.youtube.com/@riveroflifechurchgrahamsto603">
+                        <i class="fa-brands fa-youtube front"></i>
+                        <i class="fa-brands fa-youtube back"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="donation_overlay" id="donationOverlay">
+      <div class="donation_container">
+        <div class="close-btn">
+            <i class="fa-solid fa-circle-xmark" onclick="closeDonationOverlay()"></i>
+        </div>
+        <div class="donation_information">
+          <img src="images/services.png" alt="Donation image">
+        </div>
+        <div class="right_side">
+            <div class="progressContainer">
+              <div class="circle active"></div>
+              <div class="circle"></div>
+            </div>
+          <div class="donation">
+            <form id="donationForm">
+              <div class="donation_step" id="step1">
+                <h2 class="heading">Make a Donation</h2>
+                <p class="subHeading">Partner With Us to Care and Serve</p>
+                <div class="valueButtons">
+                  <button type="button" value="50" class="money-btn">R 50</button>
+                  <button type="button" value="100" class="money-btn">R 100</button>
+                  <button type="button" value="200" class="money-btn">R 200</button>
+                  <button type="button" value="400" class="money-btn">R 400</button>
+                </div>
+                <input type="text" class="custAmount" id="customAmount" name="amount" placeholder="Enter custom amount" required>
+                <div class="donor-info">
+                  <input type="text" id="donor_name" name="donor_name" placeholder="Name" required>
+                  <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <button type="button" class="submit_btn next-btn" id="continueBtn">Continue to Payment</button>
+              </div>
+              <div class="donation_step" id="step2" style="display:none;">
+                <h3 class="heading" style="text-align: center;">Payment Details</h3>
+                <div class="DonationPreview" style="display: flex; justify-content: space-between; padding: 10px;">
+                  <div class="donation-totals">
+                    <p class="innerText" style="font-size: 12px; color: grey;">TOTAL DONATION</p>
+                    <p class="innerText" id="amountDisplay" style="font-size: 20px;"></p>
+                  </div>
+                  <button type="button" class="changeAmount" id="changeAmountBtn" style="background: none; border: none; color: #f1ac44;">Change</button>
+                </div>
+                <div class="cardContainer">
+                  <div class="card_form">
+                    <input type="text" placeholder="Name on Card" id="cardName" required>
+                    <input type="text" placeholder="Card Number" id="cardNumber" required maxlength="19">
+                    <div class="card_row">
+                      <input type="text" placeholder="MM/YY" id="expirationDate" required maxlength="5">
+                      <input type="text" placeholder="CVV" id="cvv" required maxlength="3">
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="submit_btn" onclick="alert('Demo Mode: Thank you for your support!')">Complete Payment</button>
+              </div>
+            </form>
+            <div class="footer-donation">
+              <p><i class="fa-solid fa-lock"></i> Secure Payment</p>
+              <div class="card-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="login_section">
+        <div class="login_overlay" style="display: none;">
+            <a href="#" class="close-btn" onclick="closeLoginOverlay(); return false;"><i class="fa-solid fa-circle-xmark"></i></a>
+            <div class="login_container">
+                <div class="login_information">
+                    <video autoplay loop muted playsinline>
+                        <source src="images/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="right_side">
+                    <div class="login_register">
+                        <div class="functionality_type">
+                            <input type="radio" class="typeButton" name="login_register" value="login" id="login" checked onclick="showLoginOverlay('login')">
+                            <input type="radio" class="typeButton" name="login_register" value="register" id="register" onclick="showLoginOverlay('register')">
+                            <label for="login" class="typeLable" id="loginLable">Login</label>
+                            <label for="register" class="typeLable" id="registerLable">Register</label>
+                        </div>
+                    </div>
+                    
+                    <div class="login">
+                        <h2 class="heading">Hello there!</h2>
+                        <p class="subHeading">Welcome to the River of Life Church.</p>
+                        <form id="loginForm" onsubmit="event.preventDefault(); alert('Authentication operations require a live backend. Interactivity demonstration only.');">
+                            <input type="text" placeholder="Username" required>
+                            <div class="password-container">
+                                <input type="password" placeholder="Password" id="password" required>
+                            </div>
+                            <button class="submit_btn" type="submit">Login</button>
+                        </form>
+                    </div>
+
+                    <div class="register" style="display: none;">
+                        <h2 class="heading">Create Account.</h2>
+                        <p class="subHeading">Let's Serve Together</p>
+                        <div class="form_wrapper">
+                            <form id="registerForm" onsubmit="event.preventDefault(); alert('Registration operations require a live backend. Interactivity demonstration only.');">
+                                <div class="name-row" style="display: flex; gap: 10px;">
+                                    <input type="text" placeholder="First Name" required />
+                                    <input type="text" placeholder="Last Name" required />
+                                </div>
+                                <input type="email" placeholder="Email Address" required />
+                                <input type="password" placeholder="Password" required />
+                                <button type="submit" id="registerBtn">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="breadcrumb.js"></script>
+    <script src="connectValidation.js"></script>
+    <script src="donation.js"></script>
+    <script src="header.js"></script>
+    <script src="login.js"></script>
+    <script src="index.js"></script>
+    <script src="internetConnection.js"></script>
+
+    <script>
+        function showLoginOverlay(section) {
+            const loginDiv = document.querySelector('.login');
+            const registerDiv = document.querySelector('.register');
+            const overlay = document.querySelector('.login_overlay');
+            if (!overlay) return;
+            
+            overlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
+            if (section === 'login') {
+                loginDiv.style.display = 'block';
+                registerDiv.style.display = 'none';
+                document.getElementById('login').checked = true;
+            } else if (section === 'register') {
+                loginDiv.style.display = 'none';
+                registerDiv.style.display = 'block';
+                document.getElementById('register').checked = true;
+            }
+        }
+
+        function closeLoginOverlay() {
+            const overlay = document.querySelector('.login_overlay');
+            if (overlay) {
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto'; 
+            }
+        }
+        
+        function showDonationOverlay() {
+            document.getElementById('donationOverlay').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeDonationOverlay() {
+            document.getElementById('donationOverlay').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
