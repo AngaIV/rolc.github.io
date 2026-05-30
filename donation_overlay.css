@@ -1,0 +1,325 @@
+
+.donation_overlay * {
+  font-family: "Overpass", sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Main colours used by the donation system */
+.donation_overlay {
+  --main-yellow: #f1ac44;
+  --main-yellow-hover: #f1bc6c;
+  --lighter-yellow: #fff700;
+  --main-black: #000000;
+  --main-white: #fff;
+  --text-grey: #9c9da3;
+  --backgroung-grey: #ddd;
+  --border-colour: #dddddda2;
+}
+
+/* Overlay */
+.donation_overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  animation: donation_fadeIn 0.3s ease;
+}
+
+/* Container */
+.donation_overlay .donation_container {
+  display: flex;
+  width: 950px;
+  max-width: 95%;
+  height: 550px;
+  background: var(--main-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+  animation: donation_slideDown 0.4s ease;
+}
+
+/* Left side */
+.donation_overlay .donation_information {
+  flex: 1;
+  background: #001965;
+}
+.donation_overlay .donation_information img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+.donation_overlay .donation_information img:hover {
+  transform: scale(1.05);
+}
+
+/* Right side */
+.donation_overlay .right_side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 30px;
+  background: var(--main-white);
+  position: relative;
+  overflow: auto;
+}
+
+.input-error { outline: 2px solid rgba(192,57,43,0.15); border-color: #c0392b; }
+.field-error { color: #c0392b; font-size: 12px; margin-top: 6px; }
+
+
+/* Close button */
+.donation_overlay .close-btn i {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 25px;
+  color: var(--main-white);
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.donation_overlay .close-btn i:hover {
+  transform: scale(1.3);
+  color: var(--main-yellow);
+}
+
+/* Headings */
+.donation_overlay .donation .heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 0;
+  text-align: center;
+}
+.donation_overlay .donation .subHeading {
+  color: var(--main-black);
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+/* Progress indicators */
+.donation_overlay .progressContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+.donation_overlay .circle {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: #ddd;
+}
+.donation_overlay .circle.active {
+  background: var(--main-yellow);
+}
+.donation_overlay .progressLine {
+  width: 40px; height: 3px;
+  background: var(--main-yellow);
+  transition: width 0.3s ease;
+}
+
+/* Form styling */
+.donation_overlay form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Value buttons */
+.donation_overlay .valueButtons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.donation_overlay .money-btn {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.donation_overlay .money-btn:hover,
+.donation_overlay .money-btn.is-checked {
+  background: var(--main-yellow);
+  color: #fff;
+  border-color: var(--main-yellow);
+}
+
+/* Inputs */
+.donation_overlay .custAmount,
+.donation_overlay .donor-info input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.donation_overlay .donor-info {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.donation_overlay .donor-info input {
+  flex: 1;
+}
+
+/* Buttons */
+.donation_overlay .donation .submit_btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: var(--main-yellow);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.donation_overlay .donation .submit_btn:hover {
+  background: var(--main-yellow-hover);
+}
+
+/* Payment step */
+.donation_overlay .DonationPreview {
+  width: 100%;
+  border: 1px dashed #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  margin-bottom: 15px;
+}
+.donation_overlay .changeAmount {
+  background: none;
+  border: none;
+  color: var(--main-yellow);
+  cursor: pointer;
+  font-weight: bold;
+}
+.donation_overlay .paymentOptions {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  height: 35px;
+  overflow: auto;
+  margin-bottom: 15px;
+}
+.donation_overlay .paymentLable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #888;
+  font-weight: 600;
+  z-index: 2;
+}
+.donation_overlay .paymentOptions-selection {
+  position: absolute;
+  height: 100%;
+  width: calc(100%/3);
+  background: var(--main-black);
+  left: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.donation_overlay #googlepay:checked ~ .paymentOptions-selection {
+  left: 33.3%;
+}
+.donation_overlay #paypal:checked ~ .paymentOptions-selection {
+  left: 66.6%;
+}
+.donation_overlay #creditcard:checked ~ #creditcardLable,
+.donation_overlay #googlepay:checked ~ #googlepayLable,
+.donation_overlay #paypal:checked ~ #paypalLable {
+  color: var(--main-white);
+}
+
+/* Card inputs */
+.donation_overlay .card_form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.donation_overlay .card_row {
+  display: flex;
+  gap: 10px;
+}
+
+/* Footer */
+.donation_overlay .footer-donation {
+  margin-top: 15px;
+  text-align: center;
+  color: var(--text-grey);
+  font-size: 13px;
+}
+.donation_overlay .card-icons {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  color: var(--text-grey);
+}
+.donation_overlay .card-icons i {
+  font-size: 22px;
+}
+
+/* Error flash animation */
+@keyframes donation_flashRed {
+  0%, 100% { border-color: #ccc; }
+  50% { border-color: red; }
+}
+.donation_overlay .error-flash {
+  animation: donation_flashRed 0.8s ease;
+}
+
+/* Animations */
+@keyframes donation_slideDown {
+  from { transform: translateY(-200px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes donation_fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .donation_overlay .donation_container {
+    flex-direction: column;
+    height: auto;
+  }
+  .donation_overlay .donation_information {
+    height: 200px;
+  }
+  .donation_overlay .right_side {
+    padding: 30px 25px;
+  }
+  .donation_overlay form {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,253 @@
+*{
+  font-family: "Overpass", sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+}
+
+/*main colours used by the system*/
+:root {
+  --main-yellow: #f1ac44;
+  --main-yellow-hover: #f1bc6c;
+  --lighter-yellow: #fff700;
+  --main-black: #000000;
+  --main-white: #fff;
+  --text-grey: #9c9da3;
+  --backgroung-grey: #ddd;
+  --border-colour: #dddddda2;
+  --header2-color: #111111;
+}
+
+.db-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.closeDB i{
+    font-size: 25px;
+}
+
+
+.all-header h2{
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    margin-bottom: 5px !important;
+    color: #2c3e50 !important;
+    position: relative !important;
+    padding: 0 !important;
+    margin-top: 80px;
+} 
+
+.all-header p{
+font-size: 14px !important;
+    color: #555 !important;
+    flex: 1 !important;
+}
+
+
+.content-wrapper{
+    margin: 40px;
+
+}
+
+/*web header*/
+.nav_bar .web_header{
+  background-color: #111111;
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  z-index: 900; 
+  color: white;
+}
+
+
+.databaseCard {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #e8e8e8;
+    max-height: 600px;
+    overflow-y: auto;
+    overflow-x: auto; 
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+
+/* Toolbar styling */
+.databaseFunctionalities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.admin-dashboard{
+    margin: 0;
+}
+
+/* Search bar */
+.search-container {
+    position: relative;
+    flex: 1 1 250px;
+}
+
+.search-container input[type="search"] {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-container input[type="search"]:focus {
+    border-color: #4a90e2;
+}
+
+.search-container i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+/* Dropdown */
+select#tableSelection {
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+select#tableSelection:focus {
+    border-color: #4a90e2;
+}
+
+/* Buttons */
+#newRecord-btn, #export-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    background: #4a90e2;
+    transition: background 0.2s;
+}
+
+#newRecord-btn:hover, #export-btn:hover {
+    background: #357ABD;
+}
+
+
+/* Table styling */
+.databaseTable {
+    width: 100%; 
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: auto; }
+
+
+.databaseTable thead {
+    background: #f8f9fa;
+}
+
+.databaseTable thead th {
+    position: sticky;
+    top: 0;
+    background: #f8f9fa;
+    z-index: 10;
+}
+
+.databaseTable thead tr:first-child th:first-child {
+    border-top-left-radius: 20px;
+}
+
+.databaseTable thead tr:first-child th:last-child {
+    border-top-right-radius: 20px;
+}
+
+.databaseTable th {
+    padding: 16px 20px;
+    text-align: left;
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.databaseTable td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #edf2f7;
+    color: #2d3748;
+    font-size: 12px;
+}
+
+.databaseTable tbody tr:hover {
+    background-color: #f7fafc;
+}
+
+.databaseTable tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+.databaseTable tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+.centerButtons {
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .databaseCard {
+        padding: 15px;
+    }
+
+    .databaseFunctionalities {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .databaseTable {
+        display: block;
+        overflow-x: auto;
+        border-radius: 8px;
+    }
+
+    .databaseTable th,
+    .databaseTable td {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .databaseTable th {
+        font-size: 12px;
+    }
+
+    #newRecord-btn, #export-btn {
+        justify-content: center;
+    }
+}
+
+
+
