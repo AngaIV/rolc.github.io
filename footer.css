@@ -207,6 +207,13 @@
   transition: background 0.5s ease;
 }
 
+.social-icons .yt-link:hover {
+  background: #f80037;
+  border-color: #f80037;
+  color: white;
+  transition: background 0.5s ease;
+}
+
 #newsLetterEmail{
   position: relative;
   border-radius: 120px;
