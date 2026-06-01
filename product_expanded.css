@@ -401,9 +401,11 @@ html, body {
 }
 
 /*reviews*/
+
 .reviews-section {
   position: relative;
   margin-bottom: 50px;
+
 }
 
 .reviews-header {

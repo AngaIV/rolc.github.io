@@ -855,6 +855,7 @@ animation: blink 1.5s steps(1) infinite;
   color: var(--main-white);
 }
 
+
 /*Review Section*/
 .review-section{
   background-color: #111111;
@@ -2064,4 +2065,170 @@ hr {
     align-items: flex-start;
     gap: 4px;
   }
+}
+
+/*overlay background*/
+.all-header h2{
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    margin-bottom: 5px !important;
+    color: #333!important;
+    position: relative !important;
+    padding: 0 !important;
+    margin-top: 0;
+} 
+
+.all-header p{
+    font-size: 14px !important;
+    color: #555 !important;
+    flex: 1 !important;
+}
+
+.testimony-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/*form container*/
+.testimony-overlay-content {
+    background: #fff;
+    padding: 30px 50px;
+    border-radius: 10px;
+    width: 600px;
+    max-width: 90%;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    height: auto;
+    animation: donation_slideDown 0.4s ease;
+}
+
+/*close button*/
+.testimony-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/*form fields*/
+.testimony-overlay-content input[type="text"],
+.testimony-overlay-content input[type="file"],
+.testimony-overlay-content textarea,
+.testimony-overlay-content select {
+    width: 100%;
+    padding: 10px;
+    margin: 0 0 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.testimony-overlay-content textarea{
+    margin-bottom: 5px;
+}
+
+.testimony-overlay-content textarea{
+    height: auto;
+    min-height: 100px;
+}
+
+.testimony-overlay-content input[type="submit"] {
+    background-color: var(--main-yellow);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.testimony-overlay-content input[type="submit"]:hover {
+    background-color: var(--hover-yellow);
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+/*rating stars*/
+.rating-container {
+    margin: 0;
+}
+
+.rating-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 28px;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    color: #ffc107;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row > div {
+    flex: 1;
+}
+
+.form-group {
+    margin: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/*animation*/
+@keyframes donation_slideDown {
+  from { transform: translateY(-200px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes donation_fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="store.css">
+
+    </head>
+        <header class="nav_bar">
+        <div class="web_header">
+            <div class="header_content">
+                <nav class="navMenu">
+                    <div class="group">
+                        <a class="header_nav" href="store_home.html">HOME</a>
+                        <a class="header_nav" href="store.html">SHOP</a>
+                        <a class="header_nav" href="contact.html">CONTACT</a>
+                    </div>
+                
+                    <div class="group">
+                        <a id="logo_nav" href="index.html">
+                            <img src="images/churchLogo.png" alt="web_logo" class="web_logo white-logo" width="50px" height="50px" style="display: block;">
+                            <img src="images/churchLogoBlack.png" alt="web_logo" class="web_logo black-logo" width="50px" height="50px" style="display: none;">
+                        </a>
+                    </div>
+                    
+                    <div class="group" style="display: flex; align-items: center;">
+                        <a href="javascript:void(0)" id="testimonyOpenBtn" class="testimony-open-btn">RATE OUR SHOP</a>
+
+                        <a href="#" style="font-size: 20px;" onclick="showLoginOverlay('login')"><i class="bi bi-person-circle"></i></a>
+
+                        <a href="shopping_cart.html" style="font-size: 18px; position: relative;">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                            <span id="cart-counter-badge" style="background: red; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px; position: absolute; top: -8px; right: -8px; display: none;">0</span>
+                        </a>
+                    </div>
+                </nav>
+                
+                <div class="menu-toggle">&#9776;</div>
+            </div>
+        </div>
+    </header>
+    <body class="store-body">
+        
+        <section class="header_section">
+            <div class="hs_wrapper" data-aos="fade-right">
+                <h2>
+                    OUR SHOP
+                </h2>
+                <div class="filter_options">
+                    <button type="button" class="filter-btn" data-category="all">ALL</button>
+                    <button type="button" class="filter-btn" data-category="Clothing">CLOTHES</button>
+                    <button type="button" class="filter-btn" data-category="Accessories">ACCESSORIES</button>
+                </div>
+            </div>
+        </section>
+
+         <div class="items-display-container">
+            <div class="items-grid">
+                <table>
+                    <tr>
+                        <!-- Product Item 1: Grace T-Shirt -->
+                        <td>
+                            <div class="card-wrapper" data-aos="fade-left">
+                                <div class="product-card" data-product-id="1" data-category="Clothing">
+                                    <img src="uploads/products/1759608983_praise_team_shirt.png" alt="Grace T-Shirt" class="product-img">
+                                    <div class="options"> 
+                                        <div class="option-specs">
+                                            <form>
+                                                <select name="size" class="spec-btn size-select" data-sizes='{"S":10,"M":15,"L":0}'>
+                                                    <option value="">SELECT SIZE</option>
+                                                    <option value="S">S</option>
+                                                    <option value="M">M</option>
+                                                    <option value="L" disabled>L (Out of Stock)</option>
+                                                </select>
+                                                <select name="quantity" class="spec-btn quantity-select" disabled>
+                                                    <option value="">SELECT QUANTITY</option>
+                                                </select>
+                                            </form>
+                                        </div> 
+                                        <button type="button" class="add-cart-btn" 
+                                                data-id="1" 
+                                                data-name="Grace T-Shirt" 
+                                                data-price="250.00">
+                                                ADD TO CART
+                                        </button>
+                                    </div> 
+                                </div> 
+                                <div class="product-info">
+                                    <a style="margin-top: 10px !important;" href="product_expanded.html?product_id=1" class="prod_name">Grace T-Shirt</a>
+                                    <p class="price">R 250.00</p>
+                                </div>
+                            </div> 
+                        </td>
+
+                        <!-- Product Item 2: Faith Hoodie -->
+                        <td>
+                            <div class="card-wrapper" data-aos="fade-left">
+                                <div class="product-card" data-product-id="2" data-category="Clothing">
+                                    <img src="uploads/products/1759608476_blue_hoodie.png" alt="Faith Hoodie" class="product-img">
+                                    <div class="options"> 
+                                        <div class="option-specs">
+                                            <form>
+                                                <select name="size" class="spec-btn size-select" data-sizes='{"M":8,"L":12}'>
+                                                    <option value="">SELECT SIZE</option>
+                                                    <option value="M">M</option>
+                                                    <option value="L">L</option>
+                                                </select>
+                                                <select name="quantity" class="spec-btn quantity-select" disabled>
+                                                    <option value="">SELECT QUANTITY</option>
+                                                </select>
+                                            </form>
+                                        </div> 
+                                        <button type="button" class="add-cart-btn" 
+                                                data-id="2" 
+                                                data-name="Faith Hoodie" 
+                                                data-price="450.00">
+                                                ADD TO CART
+                                        </button>
+                                    </div> 
+                                </div> 
+                                <div class="product-info">
+                                    <a style="margin-top: 10px !important;" href="product_expanded.html?product_id=2" class="prod_name">Faith Hoodie</a>
+                                    <p class="price">R 450.00</p>
+                                </div>
+                            </div> 
+                        </td>
+
+                        <!-- Product Item 3: Holy Bible -->
+                        <td>
+                            <div class="card-wrapper" data-aos="fade-left">
+                                <div class="product-card" data-product-id="3" data-category="Accessories">
+                                    <img src="uploads/products/1759597274_bible.png" alt="Holy Bible" class="product-img">
+                                    <div class="options"> 
+                                        <div class="option-specs">
+                                            <form>
+                                                <select name="quantity" class="spec-btn quantity-select">
+                                                    <option value="">SELECT QUANTITY</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </form>
+                                        </div> 
+                                        <button type="button" class="add-cart-btn" 
+                                                data-id="3" 
+                                                data-name="Holy Bible" 
+                                                data-price="180.00">
+                                                ADD TO CART
+                                        </button>
+                                    </div> 
+                                </div> 
+                                <div class="product-info">
+                                    <a style="margin-top: 10px !important;" href="product_expanded.html?product_id=3" class="prod_name">Holy Bible</a>
+                                    <p class="price">R 180.00</p>
+                                </div>
+                            </div> 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="btn-wrapper">
+            <button class="main-btn back" disabled>BACK</button>
+            <button class="main-btn next">NEXT</button>
+        </div>
+        
+    </body>
+    <script src="store-functionalities.js"></script>
+    <!-- Include your static footer component here if needed -->
+</html>s
