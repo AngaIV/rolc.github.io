@@ -159,23 +159,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const productId = this.getAttribute('data-id');
 
+            const productName = this.getAttribute('data-name') || 'Product';
+
             console.log('Adding to cart:', {
                 productId: productId,
                 size: size,
                 quantity: quantity
             });
 
-            //form submit
-            const form = document.createElement('form');
-            form.method = 'POST';
-            form.action = 'add_to_cart.php';
-            form.innerHTML = `
-                <input type="hidden" name="product_id" value="${productId}">
-                <input type="hidden" name="size" value="${size}">
-                <input type="hidden" name="quantity" value="${quantity}">
-            `;
-            document.body.appendChild(form);
-            form.submit();
+            // Demo Mode Alert (Replaces form submission)
+            alert(
+                `[Demo Mode]\n` +
+                `Successfully added to cart!\n\n` +
+                `Item: ${productName} (ID: ${productId})\n` +
+                `Size: ${size}\n` +
+                `Quantity: ${quantity}`
+            );
+
+            
         });
     });
 

@@ -28,7 +28,36 @@ function closeLoginOverlay() {
     document.body.style.overflow = 'auto'; 
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+            const internalCreateBtn = document.querySelector('.internal_create');
+            if (internalCreateBtn) {
+                internalCreateBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showLoginOverlay('register');
+                });
+            }
 
+            // Demo Mode Form Submit Handler
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const usernameInput = loginForm.querySelector('input[name="username"]');
+                    const username = usernameInput ? usernameInput.value : 'Guest';
+                    alert(`Demo Mode: Welcome, ${username}! Authentication servers are offline.`);
+                });
+            }
+
+            const registerForm = document.getElementById('registerForm');
+            if (registerForm) {
+                registerForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const firstNameInput = document.getElementById('firstName');
+                    const name = firstNameInput ? firstNameInput.value : 'User';
+                    alert(`Demo Mode: Account registration submitted for ${name}. Database connection is offline.`);
+                });
+            }
+        });
 
 //function to handle Create Account link click
 function handleCreateAccountClick() {

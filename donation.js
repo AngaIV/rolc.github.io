@@ -276,4 +276,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     });
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+        const donationForm = document.getElementById('donationForm');
+        if (donationForm) {
+            donationForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Stop the form from executing redirection rules
+                
+                // Parse contextual elements out of the layout wrapper
+                const donorInput = document.getElementById('donor_name');
+                const amountInput = document.getElementById('customAmount');
+                
+                const donor = donorInput ? donorInput.value : 'Anonymous';
+                const totalAmount = amountInput ? amountInput.value : '0.00';
+                
+                alert(`Demo Mode: Thank you, ${donor}, for your contribution of R ${totalAmount}! Payment processing servers are offline.`);
+            });
+        }
+    });
 });
